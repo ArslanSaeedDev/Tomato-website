@@ -1,0 +1,90 @@
+.invoice{
+    margin: 100px 0px;
+    }
+    .invoice-item-title{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+        align-items: center;
+        color: grey;
+        font-size: max(1vw,12px);
+        font-weight: 500;
+        
+       
+    }
+    .invoice-item-titles{
+        margin-top: 10px;
+        color: black;
+    }
+ 
+    .quantity{
+        margin-left: 15px;
+    }
+    .invoice hr{
+        height: 1px;
+        background-color: #e2e2e2;
+        border: none;
+    }
+    .cross{
+        cursor: pointer;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+ 
+    
+    .invoice-total-heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .invoice-total-heading h2 {
+        font-size: 24px;
+        color: #333;
+        margin: 0;
+    }
+    
+    .invoice-total-detail {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+    }
+    
+    .invoice-total-detail b {
+        font-weight: 600;
+    }
+   
+    hr {
+        border: 0;
+        height: 1px;
+        background: #ddd;
+        margin: 10px 0;
+    }
+    
+ 
+    .owner-info {
+        text-align: center;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .owner-info h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+       
+      }
+      
+      .owner-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+      }
+      
+      .invoice-date {
+        font-style: italic;
+        font-size: 14px;
+        color: #555;
+        margin-top: 15px;
+      }
+      

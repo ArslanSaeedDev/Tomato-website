@@ -1,0 +1,105 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 8vw;
+    padding-top: 80px;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 100%;
+    gap: 80px;
+  }
+  
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  
+  .footer-content-center li,
+  .footer-content-right li {
+    list-style: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .footer-content-center h2,
+  .footer-content-right h2 {
+    color: white;
+  }
+  
+  .footer-social-icon img {
+    width: 40px;
+    margin-right: 20px;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  @media (max-width: 1024px) {
+    .footer-content {
+      gap: 40px;
+    }
+    
+    .footer-social-icon img {
+      width: 35px; /* Adjust size of social icons */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr; /* Stack columns vertically */
+      gap: 60px; /* Adjust gap between sections */
+    }
+  
+    .footer-content-left {
+      align-items: center; /* Center align text */
+      text-align: center;
+    }
+  
+    .footer-content-center,
+    .footer-content-right {
+      align-items: center; /* Center align sections */
+      text-align: center;
+    }
+  
+    .footer-social-icon img {
+      width: 30px; /* Further adjust size of social icons */
+      margin-right: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 20px 4vw; /* Reduce padding */
+      gap: 20px; /* Reduce gap between elements */
+    }
+  
+    .footer-content {
+      gap: 40px; /* Further adjust gap */
+    }
+  
+    .footer-social-icon img {
+      width: 25px; /* Further adjust size of social icons */
+      margin-right: 10px;
+    }
+  
+    .footer-content-left img {
+      width: 80%; /* Resize logo for smaller screens */
+    }
+  
+    .footer p {
+      font-size: 0.875rem; /* Adjust font size */
+      text-align: center; /* Center align footer text */
+    }
+  }
+  
