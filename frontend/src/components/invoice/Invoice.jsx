@@ -24,7 +24,7 @@ function Invoice() {
 
   return (
     <div className="invoice" ref={invoiceRef}>
-      <div className="cart-item">
+      <div className="cart-item1">
         <div className="owner-info">
           <h1>Zohaib Electrical Engineer</h1>
           <p>Chak No 319 H/R Maroot</p>
