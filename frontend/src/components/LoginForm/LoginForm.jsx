@@ -3,8 +3,7 @@ import { assets } from "../../assets/assets";
 import "./LoginForm.css";
 import { StoreContext } from "../context/StoreContext";
 import axios from "axios";
-import { toast } from 'react-toastify';
-
+import { toast } from "react-toastify";
 
 const LoginForm = ({ setShowLogin }) => {
   const { url, setToken } = useContext(StoreContext);
@@ -32,19 +31,23 @@ const LoginForm = ({ setShowLogin }) => {
     }
 
     try {
-        const response = await axios.post(apiUrl, data);
-        if (response.data.success) {
-          setToken(response.data.token);
-          localStorage.setItem("token", response.data.token);
-          setShowLogin(false);
-          toast.success(currState === "Login" ? "Successfully Logged In!" : "Successfully Registered!");
-        } else {
-          toast.error(response.data.message);
-        }
-      } catch (error) {
-        console.error("An error occurred:", error);
-        toast.error("Something went wrong. Please try again.");
+      const response = await axios.post(apiUrl, data);
+      if (response.data.success) {
+        setToken(response.data.token);
+        localStorage.setItem("token", response.data.token);
+        setShowLogin(false);
+        toast.success(
+          currState === "Login"
+            ? "Successfully Logged In!"
+            : "Successfully Registered!"
+        );
+      } else {
+        toast.error(response.data.message);
       }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -87,7 +90,7 @@ const LoginForm = ({ setShowLogin }) => {
           />
         </div>
         <button type="submit">
-          {currState === "SignUp" ?"Create account": "Login"}
+          {currState === "SignUp" ? "Create account" : "Login"}
         </button>
         <div className="loginpopup-condition">
           <input type="checkbox" required />

@@ -15,6 +15,10 @@ function Sidebar() {
           <img src={assets.order_icon} alt="List Items" />
           <p>List Items</p>
         </NavLink>
+        <NavLink to="order" className="sidebar-option">
+          <img src={assets.order_icon} alt="List Items" />
+          <p>Orders</p>
+        </NavLink>
        
       </div>
     </div>

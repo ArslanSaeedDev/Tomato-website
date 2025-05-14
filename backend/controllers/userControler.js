@@ -2,6 +2,7 @@ import userModel from "../models/userSchema.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import validator from "validator";
+import Order from '../models/Order.js';
 
 // create JWT Token
 const createToken = (id) => {
@@ -79,4 +80,35 @@ const registerUser = async (req, res) => {
   }
 };
 
-export { loginUser, registerUser };
+// place order
+const placeOrder = async (req, res) => {
+  try {
+    const { customerInfo, items, subtotal, deliveryFee, totalAmount } = req.body;
+    
+    const newOrder = new Order({
+      customerInfo,
+      items,
+      subtotal,
+      deliveryFee,
+      totalAmount
+    });
+
+    await newOrder.save();
+    res.status(201).json({ message: 'Order placed successfully', order: newOrder });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+// get all orders
+const getAllOrders = async (req, res) => {
+  try {
+    const orders = await Order.find().sort({ createdAt: -1 });
+    res.status(200).json(orders); 
+  } catch (error) {
+    console.error("Error fetching orders:", error);
+    res.status(500).json({ message: 'Failed to fetch orders' });
+  } 
+};
+
+export { loginUser, registerUser ,getAllOrders, placeOrder};

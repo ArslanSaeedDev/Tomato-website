@@ -26,7 +26,7 @@ function Invoice() {
     <div className="invoice" ref={invoiceRef}>
       <div className="cart-item1">
         <div className="owner-info">
-          <h1>Zohaib Electrical Engineer</h1>
+          <h1>Zohaib Foodistan Restaurant</h1>
           <p>Chak No 319 H/R Maroot</p>
           <p>Cell 03464519319 : 03218323319</p>
           <p className="invoice-date">Date: {new Date().toLocaleDateString()}</p>
