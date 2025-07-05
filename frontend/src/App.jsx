@@ -4,10 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart/Cart";
 import Home from "./pages/Home/Home";
 import Footer from "./components/Footer/Footer";
-import PlaceOrder from "./pages/placeOrder/placeOrder";
 import LoginForm from "./components/LoginForm/LoginForm";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PlaceOrder from './pages/placeOrder/PlaceOrder';
 
 
 
