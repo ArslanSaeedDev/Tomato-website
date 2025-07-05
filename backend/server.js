@@ -13,7 +13,11 @@ const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json()); //send message from Frontend to backend
-app.use(cors())
+app.use(cors({
+  origin: "https://tomato-website-two.vercel.app", 
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
 
 
 // Connect to database
