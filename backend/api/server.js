@@ -24,7 +24,7 @@ app.use(
 // Routes
 app.use("/api/food", foodRouter);
 app.use("/api/user", userRouter);
-app.use("/images", express.static("upload")); // Static file serving
+// app.use("/images", express.static("upload")); // Static file serving
 
 app.get("/", (req, res) => {
   res.send("API is working from Vercel Serverless Function");
